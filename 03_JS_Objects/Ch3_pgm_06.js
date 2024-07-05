@@ -3,13 +3,11 @@
 var book;
 var bookName;
 
-bookName = "The Adventures of Tom Sawyer";
+bookName = "The Adventures of Ian the Slayer";
 
 book = {
-    title : bookName
+  title: bookName,
 };
-
-
 
 /* Further Adventures
  *

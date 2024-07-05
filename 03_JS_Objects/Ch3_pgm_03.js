@@ -1,16 +1,22 @@
 // A book as an object
 
 var book;
+var book2;
 
 book = {
-    title : "The Hobbit",
-    author : "J. R. R. Tolkien",
-    published : 1937
+  title: "The Harry Potter",
+  author: "J. R. R. Tolkien",
+  published: 1937,
+};
+
+book2 = {
+  title: "Chilling Adventures of Sabrina",
+  author: "J. R. R. Martin",
+  published: 1947,
 };
 
 console.log(book);
-
-
+console.log(book2);
 
 /* Further Adventures
  *
