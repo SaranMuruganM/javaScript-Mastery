@@ -8,7 +8,8 @@ locationName = "Argentina";
 
 console.log(playerName + " is in " + locationName);
 
-
+var score = 20;
+console.log("Lionel Messi has a score of " + score);
 
 /* Further Adventures
  *

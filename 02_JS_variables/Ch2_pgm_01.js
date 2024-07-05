@@ -1,6 +1,8 @@
 // Declaring a variable
 
 var score;
+var runs;
+var boundary;
 
 /* Further Adventures
  *

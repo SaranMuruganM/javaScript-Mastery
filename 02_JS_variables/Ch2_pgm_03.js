@@ -2,9 +2,11 @@
 
 var score;
 score = 100;
+
+var matches;
+matches = 5;
+console.log(matches);
 console.log(score);
-
-
 
 /* Further Adventures
  *

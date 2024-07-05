@@ -10,8 +10,10 @@ console.log("New score: " + score);
 
 console.log("Way to go!");
 
-
-
+console.log("Brilliant splat!!!");
+score += 100;
+console.log(score);
+console.log("Congratulations on the splat");
 /* Further Adventures
  *
  * The player splats a kumquat.

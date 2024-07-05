@@ -7,7 +7,11 @@ console.log(score);
 score = 150;
 console.log(score);
 
+var matches = 10;
+console.log(matches);
 
+matches = 5;
+console.log(matches);
 
 /* Further Adventures
  *
