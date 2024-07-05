@@ -1,7 +1,7 @@
 // Using console.log to display information
 
 console.log("Hello World!");
-
+console.log("Sample Output");
 
 /* Further Adventures
  *
