@@ -6,7 +6,7 @@ var _underscore56;
 var StartWithCapital;
 var z5;
 
-var yield = 15;
+var yield = 10;
 console.log(yield);
 
 /* Further Adventures
