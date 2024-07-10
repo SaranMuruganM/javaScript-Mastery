@@ -3,12 +3,12 @@
 var showMessage;
 
 showMessage = function (message) {
-	console.log("The message is: " + message);
+  console.log("The message is: " + message);
 };
 
-showMessage("It's full of stars!");
-
-
+showMessage("It's full of Colors");
+showMessage("It's full of Balls");
+showMessage("It's full of Water");
 
 /* Further Adventures
  *

@@ -8,12 +8,31 @@ square = function (numberToSquare) {
   console.log(numberToSquare + " * " + numberToSquare + " = " + result);
 };
 
+let cube = function (numberToCube) {
+  let result = numberToCube ** 3;
+  console.log(
+    numberToCube + " * " + numberToCube + " * " + numberToCube + " = " + result
+  );
+};
+
+let squareRoot = function (num) {
+  let result = Math.sqrt(num);
+  console.log("Square root of " + num + " is " + result);
+};
+
 square(10);
 square(-2);
 square(1111);
 square(0.5);
 
+cube(5);
+cube(-2);
+cube(1111);
+cube(0.5);
 
+squareRoot(9);
+squareRoot(81);
+squareRoot(10);
 
 /* Further Adventures
  *

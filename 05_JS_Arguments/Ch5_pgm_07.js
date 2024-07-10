@@ -3,13 +3,12 @@
 var showPlayerName;
 
 showPlayerName = function (playerName) {
-    console.log(playerName);
+  console.log("the Player's name is" + playerName);
+  console.log("The Name has " + playerName.length + " letters");
 };
 
 showPlayerName("Kandra");
 showPlayerName("Dax");
-
-
 
 /* Further Adventures
  *

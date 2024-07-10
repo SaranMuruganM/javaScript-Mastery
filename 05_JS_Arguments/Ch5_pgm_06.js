@@ -3,14 +3,29 @@
 var showSum;
 
 showSum = function (number1, number2) {
-	var total = number1 + number2;
-	console.log("The sum is " + total);
+  var total = number1 + number2;
+  console.log("The sum is " + total);
 };
 
+let showProduct = (num1, num2, num3) => {
+  let total = num1 * num2 * num3;
+  console.log("The Product is " + total);
+};
+let showDifference = (num1, num2) => {
+  let total = num1 - num2;
+  console.log("The Difference is " + total);
+};
+let showQuotient = (num1, num2) => {
+  let total = num1 / num2;
+  console.log("The Quotient is " + total);
+};
 showSum(30, 23);
 showSum(2.8, -5);
+showSum(56, 74);
 
-
+showProduct(2, 5, 10);
+showDifference(10, 5);
+showQuotient(20, 10);
 
 /* Further Adventures
  *

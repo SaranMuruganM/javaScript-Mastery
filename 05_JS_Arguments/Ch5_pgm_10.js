@@ -4,26 +4,27 @@ var player1;
 var player2;
 var showPlayerHealth;
 
-showPlayerHealth = function (playerName, playerHealth) {
-    console.log(playerName + " has health " + playerHealth);
+showPlayerHealth = function (playerName, playerHealth, healthMultiplayer) {
+  playerHealth *= healthMultiplayer;
+  console.log(playerName + " has health " + playerHealth);
 };
 
 player1 = {
-    name: "Kandra",
-    place: "The Dungeon of Doom",
-    health: 50
+  name: "Kandra",
+  place: "The Dungeon of Doom",
+  health: 50,
+  healthMultiplayer: 3,
 };
 
 player2 = {
-    name: "Dax",
-    place: "The Old Library",
-    health: 40
+  name: "Dax",
+  place: "The Old Library",
+  health: 40,
+  healthMultiplayer: 3,
 };
 
-showPlayerHealth(player1.name, player1.health);
-showPlayerHealth(player2.name, player2.health);
-
-
+showPlayerHealth(player1.name, player1.health, player1.healthMultiplayer);
+showPlayerHealth(player2.name, player2.health, player2.healthMultiplayer);
 
 /* Further Adventures
  *
