@@ -3,14 +3,12 @@
 var sayHello;
 
 sayHello = function () {
-	console.log("Hello World!");
+  console.log("Hello \nWorld!");
 };
 
 sayHello();
 sayHello();
 sayHello();
-
-
 
 /* Further Adventures
  *

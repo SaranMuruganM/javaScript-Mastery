@@ -1,8 +1,12 @@
 // Using a function to display object properties
 
 var showMovieInfo;
-
-showMovieInfo = function () {
+var movie = {
+  title: "Dragon Sage",
+  actors: "Henry rich",
+  directors: "kenny",
+};
+var showMovieInfo = function () {
   console.log("Movie information for " + movie.title);
   console.log("------------------------------");
   console.log("Actors: " + movie.actors);
@@ -10,7 +14,7 @@ showMovieInfo = function () {
   console.log("------------------------------");
 };
 
-
+showMovieInfo();
 
 /* Further Adventures
  *

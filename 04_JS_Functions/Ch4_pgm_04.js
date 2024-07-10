@@ -3,10 +3,10 @@
 var sayHello;
 
 sayHello = function () {
-    console.log("Hello World!");
+  console.log("Hello World!");
 };
 
-
+sayHello();
 
 /* Further Adventures
  *

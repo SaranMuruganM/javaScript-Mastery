@@ -3,12 +3,18 @@
 var movie1;
 var showMovieInfo;
 var movie;
-
-movie1 = {
-    title: "Inside Out",
-    actors: "Amy Poehler, Bill Hader",
-    directors: "Pete Doctor, Ronaldo Del Carmen"
+var movie2 = {
+  title: "Inside Out",
+  actors: "Amy Poehler, Bill Hader",
+  directors: "Pete Doctor, Ronaldo Del Carmen",
 };
+movie1 = {
+  title: "Inside Out",
+  actors: "Amy Poehler, Bill Hader",
+  directors: "Pete Doctor, Ronaldo Del Carmen",
+};
+
+movie = movie2;
 
 showMovieInfo = function () {
   console.log("Movie information for " + movie.title);
@@ -21,8 +27,6 @@ showMovieInfo = function () {
 movie = movie1;
 
 showMovieInfo();
-
-
 
 /* Further Adventures
  *
