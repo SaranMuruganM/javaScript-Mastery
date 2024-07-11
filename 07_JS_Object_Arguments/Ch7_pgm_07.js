@@ -3,7 +3,16 @@
 var planet = "Jupiter";
 var bigPlanet = planet.toUpperCase();
 
+let getBig=(value)=>{
+    return value.toUpperCase();
+}
+
+let getSmall=(value)=>{
+    return value.toLowerCase();
+}
 console.log(planet + " becomes " + bigPlanet);
+console.log(getBig("martha"));
+console.log(getSmall("ELLIE"));
 
 
 

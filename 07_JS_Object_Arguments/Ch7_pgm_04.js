@@ -6,25 +6,39 @@ var move;
 var showPoint;
 
 move = function (point, change) {
-    return {
-        x: point.x + change.x,
-        y: point.y + change.y
-    };
+  return {
+    x: point.x + change.x,
+    y: point.y + change.y,
+  };
 };
 
 showPoint = function (point) {
-    console.log("( " + point.x + " , " + point.y + " )");
+  console.log("( " + point.x + " , " + point.y + " )");
 };
 
-point1 = { x : 2, y : 5 };
+let rotate90 = (point) => {
+  let temp = point.x;
+  point.x = point.y;
+  point.y = temp * -1;
+};
 
-point2 = move(point1, { x : 4, y : -2 });
+let reflectX = (point) => {
+  point.x = point.x * -1;
+};
+
+point1 = { x: 2, y: 5 };
+
+point2 = move(point1, { x: 6, y: 5 });
 
 showPoint(point1);
 console.log("Move 4 across and 2 down");
 showPoint(point2);
 
+reflectX(point1);
+showPoint(point1);
 
+rotate90(point2);
+showPoint(point2);
 
 /* Further Adventures
  *
