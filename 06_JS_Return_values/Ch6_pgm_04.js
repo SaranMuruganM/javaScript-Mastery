@@ -3,16 +3,19 @@
 var add;
 
 add = function (number1, number2) {
-	var total = number1 + number2;
-
-	return total;
+  var total = number1 + number2;
+  return total;
 };
 
-var sum = add(50, 23);
+addThreeNum = function (number1, number2, number3) {
+  var total = number1 + number2 + number3;
+  return total;
+};
+
+var sum = add(50, 10) + add(10, 20);
 
 console.log(sum);
-
-
+console.log(addThreeNum(10, 30, 20));
 
 /* Further Adventures
  *

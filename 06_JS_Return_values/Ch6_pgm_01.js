@@ -4,14 +4,16 @@ var getMessage;
 var response;
 
 getMessage = function () {
-    return "I’m going on an adventure!";
+  return "I’m going on an adventure!";
+};
+
+let getMyMessage = function () {
+  return "Returning a Messaging";
 };
 
 response = getMessage();
 
 console.log(response);
-
-
 
 /* Further Adventures
  *
@@ -24,7 +26,7 @@ console.log(response);
  * and enter commands after the prompt, >
  *
  * 2) Call getMessage at the prompt.
- *    
+ *
  *    > getMessage()
  *
  * When a function is called at the prompt,
