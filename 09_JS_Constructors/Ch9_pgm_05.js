@@ -16,14 +16,25 @@ var Planet = function (name, position, type) {
     this.addMoon = function (moon) {
         this.moons.push(moon);
     };
+    this.removeMoon=()=>{
+        this.moons.pop();
+    }
 };
 
 var planet = new Planet( "Jupiter", 5, "Gas Giant" );
+var planet2 = new Planet("Earth", 3, "Habitable");
 
 planet.addMoon("Io");
 planet.addMoon("Europa");
 
+planet2.addMoon("dex");
+planet2.addMoon("Pica");
+planet2.addMoon("Serin");
+
 planet.showPlanet();
+planet2.showPlanet();
+planet2.removeMoon();
+planet2.showPlanet()
 
 
 

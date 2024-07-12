@@ -13,22 +13,40 @@ var Planet = function (name, position, type) {
     this.addMoon = function (moon) {
         this.moons.unshift(moon);
     };
+
+    this.showMoon=()=>{
+        this.moons.forEach((item,index)=>{
+            console.log(`(${index}):${item}`);
+        });
+    }
+    
+    this.getMoon=(pindex)=>{
+        this.moons.forEach((item,index)=>{
+            if(index==pindex) console.log(item);
+           
+        });
+    }
+    
 };
 
 var planet1 = new Planet("Jupiter", 5, "Gas Giant");
 planet1.addMoon("Io");
-planet1.addMoon("Europa");
+planet1.addMoon("helis");
 
 var planet2 = new Planet("Neptune", 8, "Ice Giant");
 planet2.addMoon("Triton");
+planet1.addMoon("Aegon");
 
 var planet3 = new Planet("Mercury", 1, "Terrestrial");
+planet1.addMoon("Europa");
+planet1.addMoon("Siria");
 
 [ planet1, planet2, planet3 ].forEach(function (planet) {
     planet.showPlanet();
 });
 
-
+planet1.showMoon();
+planet1.getMoon(3);
 
 /* Further Adventures
  *

@@ -22,10 +22,17 @@ var question1 = new QuizQuestion(
     "Paris"
 );
 
+var question2 = new QuizQuestion(
+    "What is the capital of India?",
+    "delhi"
+);
+
+
 question1.addOption("Bordeaux");
 question1.addOption("F");
 question1.addOption("Paris");
 question1.addOption("Brussels");
+question1.addOption("Basils");
 
 question1.showQuestion();
 

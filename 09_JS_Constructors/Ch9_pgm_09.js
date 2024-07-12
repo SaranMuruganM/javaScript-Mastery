@@ -138,6 +138,10 @@ var spacer = {
   
       return itemsString;
     };
+
+    this.dropItems=()=>{
+      this.items.pop();
+    }
   
     this.getInfo = function (character) {
       var place = this.getPlaceInfo();
@@ -177,6 +181,30 @@ var spacer = {
   player1.addItem("The Sword of Doom");
   
   player1.showInfo("=");
+
+  
+  var player2 = new Player("Ben",65);
+  player2.place =library;
+  player2.addItem("Books");
+  player2.addItem("Knowledge crest");
+  
+  player2.showInfo("=");
+  
+  var player3 = new Player("Kimiko",90);
+  player3.place =library;
+  player3.addItem("Legendary Book");
+  player3.addItem("dusty key");
+  
+  player3.showInfo("=");
+  
+  var player4 = new Player("Ned",10);
+  player4.place =library;
+  player4.addItem("Sword");
+  player4.addItem("king's chest");
+  
+  player4.showInfo("=");
+
+  player4.dropItems();
   
   
   
