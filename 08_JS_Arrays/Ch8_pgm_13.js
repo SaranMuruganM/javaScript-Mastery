@@ -54,7 +54,8 @@ var spacer = {
   var getPlayerItems = function (player) {
     var itemsString = "Items:" + spacer.newLine();
   
-    player.items.forEach(function (item) {
+    player.items.forEach(function (item,index) {
+      index++;
       itemsString += "   - " + item + spacer.newLine();
     });
   
@@ -84,6 +85,18 @@ var spacer = {
   var showPlayerInfo = function (player, character) {
     console.log(getPlayerInfo(player, character));
   };
+
+  let showItem=(player,itemNumber)=>{
+
+    let items;
+    player.items.forEach((item,index)=>{
+        if(index==itemNumber){
+          items=item;
+            
+        } 
+      });
+      return items;
+  }
   
   
   // Create a player
@@ -98,8 +111,12 @@ var spacer = {
   showPlayerInfo(player1, "=");
   
   player1.items.push("a rusty key");
-  
+  player1.items.push("Legendary Book");
+  player1.items.push("Trade Token");  
   showPlayerInfo(player1, "*");
+  console.log("The Requested item is "+showItem(player1, 2));
+
+
   
   
   

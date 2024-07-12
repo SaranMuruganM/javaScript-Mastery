@@ -15,6 +15,14 @@ removed = items.pop();
 console.log(removed + " was removed");
 console.log(items.join(" and "));
 
+items.push("King's Landing")
+
+console.log(items.join(" and "));
+
+items[2]="Dragon Stone"
+
+items.push("Winterfell","Thyria");
+console.log(items.join(" and "));
 
 
 /* Further Adventures

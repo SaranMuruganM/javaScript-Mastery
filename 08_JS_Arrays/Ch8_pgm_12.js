@@ -11,8 +11,19 @@ var displayQuestion = function (questionAndAnswer) {
       }
     );
   };
-  
-  var question1 = {
+
+  let question=[
+     {
+    question : "What is the capital of India?",
+    answers : [
+      "Delhi",
+      "Lucknow",
+      "Bengal",
+      "odissa"
+    ],
+    correctAnswer : "Delhi"
+  },
+  {
     question : "What is the capital of France?",
     answers : [
       "Bordeaux",
@@ -21,12 +32,17 @@ var displayQuestion = function (questionAndAnswer) {
       "Brussels"
     ],
     correctAnswer : "Paris"
-  };
+  }
+  ]
+
+
   
-  displayQuestion(question1);
+  question.forEach(displayQuestion);
   
   
   
+
+
   /* Further Adventures
    *
    * 1) Add two more question objects.

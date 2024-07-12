@@ -1,21 +1,33 @@
 // Finding the total shopping bill
 
-var getTotalBill = function (itemCosts, itemCounts) {
-	var total = 0;
+var getTotalBill = function (items) {
+  let info={
+	total:0,
+	counts:0
+  }
+  items.forEach(function (cost, i) {
+  	info.total += cost.cost*cost.numberBought;
+  });
 
-	itemCosts.forEach(function (cost, i) {
-		total += cost * itemCounts[i];
-	});
+  items.forEach((count) => {
+    info.counts++;
+  });
 
-	return total;
+  return info;
 };
 
-var costs = [ 1.99, 4.95, 2.50, 9.87 ];
-var numOfEach = [ 2, 1, 5, 2 ];
-
-console.log("The total cost is $" + getTotalBill(costs, numOfEach));
-
-
+let items = [
+  { cost: 1.99, numberBought: 2 },
+  { cost: 4.95, numberBought: 9 },
+  { cost: 3.6, numberBought: 2 },
+  { cost: 8.2, numberBought: 2 },
+  { cost: 9.5, numberBought: 4 },
+  { cost: 1, numberBought: 3 },
+];
+// var costs = [1.99, 4.95, 2.5, 9.87, 10.5];
+// var numOfEach = [2, 1, 5, 2, 6];
+let objinfo=getTotalBill(items);
+console.log("The total cost is $" +objinfo.total);
 
 /* Further Adventures
  *

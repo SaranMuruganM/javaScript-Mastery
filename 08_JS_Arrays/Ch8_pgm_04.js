@@ -6,6 +6,12 @@ var dayInWeek = 4;
 console.log( days[dayInWeek] );
 console.log( days[dayInWeek - 1] );
 
+let day=(day)=>{
+    return days[day]
+}
+
+let getDay=day(4);
+console.log(getDay);
 
 
 /* Further Adventures

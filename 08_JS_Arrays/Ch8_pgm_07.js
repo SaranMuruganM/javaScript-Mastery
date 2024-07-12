@@ -3,19 +3,20 @@
 var items;
 var showInfo;
 
-items = [
-  "The Pyramids",
-  "The Grand Canyon",
-  "Bondi Beach"
-];
+items = ["The Pyramids", "The Grand Canyon", "Bondi Beach"];
+
+items.push("Winterfell", "Thyria", "King's Landing");
+items[6] = "DragonStone";
+
+let displayLength=(value)=>{
+  return value.length;
+}
 
 showInfo = function (itemToShow) {
-    console.log(itemToShow);
+  console.log(itemToShow+"\tLength:"+displayLength(itemToShow));
 };
 
 items.forEach(showInfo);
-
-
 
 /* Further Adventures
  *
