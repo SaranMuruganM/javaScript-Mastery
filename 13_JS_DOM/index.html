@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_dom</title>
+</head>
+<body>
+    <p id="p1">paragraph 1</p>
+    <p id="p2">paragraph 2</p>
+    <p id="p3">paragraph 3</p>
+    <p id="p4">paragraph 4</p>
+
+    <div class="secondQuestion">
+         <h1 >JavaScript Challenges in <span id="year">2024</span></h1>
+      <h2><span class="days">30 Days </span> Challenge</h2>
+       <ul>
+            <li class="completed"><span class="days">30 Days </span>OfPython Challenge Done</li>
+           <li class="ongoing"><span class="days">30 Days </span> Challenge Ongoing</li>
+           <li class="coming"><span class="days">30 Days </span>OfReact Challenge Coming</li>
+            <li class="coming"><span class="days">30 Days </span>OfFullStack Challenge Coming</li>
+           <li class="coming"><span class="days">30 Days </span>OfDataAnalysis Challenge Coming</li>
+            <li class="coming"><span class="days">30 Days </span>OfReactNative Challenge Coming</li>
+            <li class="coming"><span class="days">30 Days </span>OfMachineLearning Challenge Coming</li>
+        </ul>
+    </div>
+
+<script>
+    // 2. Get each of the the paragraph using document.querySelector('#id') and by their id
+        const p1=document.querySelector('#p1')
+        const p2=document.querySelector("#p2");
+        const p3=document.querySelector("#p3");
+        const p4=document.querySelector("#p4");
+    // 3. Get all the p as nodeList using document.querySelectorAll(tagname) and by their tag name
+        const pnodelist=document.querySelectorAll('p');
+    // 4. Loop through the nodeList and get the text content of each paragraph
+        pnodelist.forEach((element)=>{
+            console.log(element.textContent);
+        });
+    
+    // 5. Set a text content to paragraph the fourth paragraph,Fourth Paragraph
+        p4.textContent="Fourth Paragraph";
+    // 6. Set id and class attribute for all the paragraphs using different attribute setting methods
+        
+        pnodelist.forEach((element,index)=>{
+            element.id=`paragraph-${index}`;
+            element.classList.add(`paragraph-${index}`)
+        });
+    
+    // Level 2
+    // 1. Change stye of each paragraph using JavaScript(eg. color, background, border, font-size, font-family)
+    
+        let color=['red','blue','grey','black','yellow','orange','dodgerblue','purple','indigo','green','maroon','lime'];
+        pnodelist.forEach((element,index)=>{
+            let reverseindex=color.length - 1 - (index)
+            element.style.color=color[index];
+            element.style.background=color[reverseindex];
+            element.style.border=`2px solid ${color[index]}`;
+        })
+     // 3. Set text content, id and class to each paragraph   
+
+      pnodelist.forEach((element,index)=>{
+            element.id=`paragraph-${index}`;
+            element.classList.add(`paragraph-${index}`)
+            element.textContent=`paragraph-${index} Updated`;
+        });
+    
+        
+</script>
+<script>
+    // 1. The year color is changing every 1 second
+    // 2. The date and time background color is changing every on seconds
+   const year=document.getElementById('year');
+   const yearDate=document.querySelectorAll('.days');
+    function colorchange(){
+            year.style.color=color[randomnum()];
+            yearDate.forEach((element,change)=>{
+                element.style.color=color[randomnum()];
+            })
+
+    }
+   setInterval(colorchange,1000)
+   // 3. Completed challenge has background green
+// 4. Ongoing challenge has background yellow
+// 5. Coming challenges have background red
+
+const completed=document.getElementsByClassName('completed');
+const ongoing=document.getElementsByClassName('ongoing');
+const coming=document.getElementsByClassName('coming');
+const litems=document.querySelectorAll('li');
+console.log(litems);
+litems.forEach((items)=>{
+    const loweritem=items.textContent.toLowerCase();
+    if (loweritem.includes='ongoing') {
+        items.style.background='green';
+    }
+})
+Array.from(coming).forEach((item)=>{
+    item.style.background='red';
+})
+Array.from(ongoing).forEach((item)=>{
+    item.style.background='yellow'
+})
+
+
+const randomnum=()=>{
+    return Math.floor(Math.random()*13)
+}
+
+
+</script>
+</body>
+</html>
