@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Event</title>
+    <style>
+        body{
+            height: 100vh;
+            display: grid;
+            place-content: center;
+            font-size: 30px;
+        }
+        div{
+            height: 70px;
+            width: 40vw;
+            border-radius: 3px;
+            box-shadow: 1px 1px 4px black;
+        }
+        div p{
+            font-size: 2.5rem;
+            
+        }
+        span{
+            color: green;
+            font-size: 2.5rem;
+            
+        }
+        #keychar{
+            border-radius: 5px;
+            box-shadow: 0 0 2px 0px black;
+            width: 100px;
+            aspect-ratio: 1/1;
+            padding-top: 5%;
+            padding-inline: 5%;
+            text-align: center;
+            justify-self: center;
+           font-size: 4rem;
+           color: green;
+        }
+    </style>
+</head>
+<body>
+   <div style="display: flex;align-items: center;gap: 10px;justify-content: center;">
+     <p id="keytrack">Press any Keyboard Key</p>
+    <span></span>
+   </div>
+    <p id="keychar"></p>
+    <script>
+        const keytrack=document.getElementById('keytrack')
+        const keyC=document.getElementById('keychar')
+        const span=document.querySelector('span');
+        console.log(span);
+        keyC.style.display='none'
+        document.addEventListener('keydown',(event)=>{
+             keyC.style.display='block'
+            const key=event.keyCode;
+            const keyChar=event.key;
+            keytrack.innerHTML='You pressed';
+            span.innerHTML=keyChar;
+            keyC.innerHTML=key;
+
+
+        })
+    </script>
+</body>
+</html>

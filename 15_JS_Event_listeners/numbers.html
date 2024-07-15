@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numbers Generator</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-align: center;
+      }
+      header {
+        width: 100%;
+        text-align: center;
+      }
+      header h1 {
+        color: green;
+      }
+      .form {
+        margin-block: 30px;
+      }
+      .form p {
+        margin-right: 17rem;
+      }
+      .form input {
+        border: 1px solid green;
+        width: 40vw;
+        padding: 5px;
+        text-align: start;
+      }
+      .form input:focus:active:required {
+        border: 1px solid red;
+      }
+      .form button {
+        all: unset;
+        background-color: green;
+        color: white;
+        padding: 5px;
+        margin-inline-start: 10px;
+        cursor: pointer;
+      }
+      .container {
+        display: grid;
+        margin-inline: 5rem;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 2px;
+      }
+      .items {
+        padding: 5px;
+      }
+      .even {
+        background-color: green;
+      }
+      .odd {
+        background-color: yellow;
+      }
+      .prime {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Number Generator</h1>
+      <h4>300 Days of JavaScript</h4>
+    </header>
+    <div class="form">
+      <input type="number" required name="numberInput" id="input" />
+      <button id="number" onclick="handleClick()">Generate Numbers</button>
+    </div>
+    <div class="container"></div>
+  </body>
+  <script>
+    function isPrime(num) {
+      if (num <= 1) return false;
+      if (num <= 3) return true;
+      if (num % 2 === 0 || num % 3 === 0) return false;
+      let i = 5;
+      while (i * i <= num) {
+        if (num % i === 0 || num % (i + 2) === 0) return false;
+        i += 6;
+      }
+      return true;
+    }
+
+    function handleClick() {
+      let input = document.getElementById("input");
+      let generate = input.value;
+
+      let container = document.getElementsByClassName("container");
+      let childTags=document.querySelectorAll('p');
+      if(childTags){
+        Array.from(childTags).forEach((element)=>{
+          element.remove();
+        })
+
+      }
+      for (i = 1; i <= generate; i++) {
+        let textContainer = document.createElement("p");
+        textContainer.textContent = i;
+        if (i % 2 == 0) {
+          textContainer.className = "items even";
+        } else {
+          textContainer.className = "items odd";
+        }
+        if (isPrime(i)) {
+          console.log(i);
+          textContainer.className = "items prime";
+        }
+      
+        container[0].appendChild(textContainer)
+      }
+
+    }
+  </script>
+</html>
