@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countries List</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .header {
+        width: 100%;
+        text-align: center;
+      }
+      #container {
+        display: grid;
+        margin: 100px;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 20px;
+      }
+      .country {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 0px 5px 0px black;
+        width: 150px;
+        aspect-ratio: 1/1;
+        border-radius: 5px;
+        padding-inline: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <h1>World Countries List</h1>
+      <h3>Total number of countries: <span id="countrieslist">193</span></h3>
+      <h5>300 Days of JavaScript</h5>
+    </div>
+    <div id="container"></div>
+    <script>
+        const container=document.getElementById('container');
+      const url = "https://restcountries.com/v2/all";
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+            data.forEach((country) => {
+
+            const countryHtml=document.createElement('div');
+            countryHtml.classList.add('country')
+            countryHtml.innerHTML = country.name;
+            console.log(country.name);
+            container.appendChild(countryHtml);
+            
+          });
+        })
+        .catch((error) => console.error(error));
+    </script>
+  </body>
+</html>
