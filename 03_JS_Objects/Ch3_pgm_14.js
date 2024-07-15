@@ -16,6 +16,8 @@ console.log(
     "Marks: " +
     questionAndAnswer.marksForQuestion
 );
+
+
 console.log("\noption 1: " + questionAndAnswer.answer1);
 console.log("option 2: " + questionAndAnswer.answer2);
 console.log("option 3: " + questionAndAnswer.answer3);
